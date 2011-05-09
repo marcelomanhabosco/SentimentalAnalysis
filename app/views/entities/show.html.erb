@@ -87,8 +87,9 @@
 		  <thead>
 		    <th>Nº</th>
 				<th>Score de Humanos</th>
-				<th>Soma das Valencias</th>
 				<th>Valência cedida pelo sistema</th>
+				<th>Acertos/Erros</th>
+				<th>Palavras/Valências</th>
 		  </thead>
 		<% @i=1 %>
 		<% @opinions.each do |opinion| %>
@@ -103,10 +104,25 @@
 			<% end unless polarity_opinion_word.nil? %>
 		  <tr>
 		    <td><%= @i %></td>
-				<td><%= opinion.human_score.force_encoding("UTF-8") %></td>
-				<td>
-					<% if positive > negative %> Positivo <% else if positive == negative %> Neutro <% else %> Negativo <% end end %>
-				</td>
+				<% if opinion.human_score.force_encoding("UTF-8") == "Ótimo" or opinion.human_score.force_encoding("UTF-8") == "Bom" %>
+					<td style='background-color:#CDEB8B;'><b><%= hs = "Positivo" %></td>
+				<% elsif opinion.human_score.force_encoding("UTF-8") == "Regular" %>
+					<td><b><%= hs = "Neutro" %></b></td>
+				<% else %>
+					<td style="background-color:#E35B5B;"><b><%= hs = "Negativo" %></b></td>
+				<% end %>
+				<% if positive > negative %>
+					<td style="background-color:#CDEB8B;"><b><%= ss = "Positivo" %></b></td>
+				 <% elsif positive == negative %>
+					<td><b><%= ss = "Neutro" %></b></td>
+				<% else %>
+					<td style="background-color:#E35B5B;"><b><%= ss = "Negativo" %></b></td>
+				<% end %>
+				<% if hs == ss %>
+					<td style='background-color:#CDEB8B;'><b>Acerto</b></td>
+				<% else %>
+					<td style="background-color:#E35B5B;"><b>Erro</b></td>
+				<% end %>
 				<td>
 					<% polarity_opinion_word.each do |pow| %>
 						<%= "#{pow.word.force_encoding("UTF-8")} ~ #{pow.polarity.force_encoding("UTF-8")} | " %>
