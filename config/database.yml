@@ -1,0 +1,29 @@
+  development:
+    adapter: mysql
+    encoding: utf8
+    database: sentimentanalysis
+    username: root
+    password: root
+    pool: 5
+    timeout: 5000
+    socket: /tmp/mysql.sock
+
+  test:
+    adapter: mysql
+    encoding: utf8
+    database: sentimentanalysis
+    username: root
+    password: root
+    pool: 5
+    timeout: 5000
+    socket: /tmp/mysql.sock
+
+  production:
+    adapter: mysql
+    encoding: utf8
+    database: sentimentanalysis
+    username: root
+    password: root
+    pool: 5
+    timeout: 5000
+    socket: /tmp/mysql.sock

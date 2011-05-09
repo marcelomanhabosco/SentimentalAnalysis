@@ -1,0 +1,24 @@
+<div id="entities">
+	<h1>Entidades</h1>
+
+	<table>
+  		<thead>
+			<th>ID</th>
+    		<th>Nome</th>
+			<th>Número de Opiniões</th>
+  		</thead>
+
+		<% @entities.each do |entity| %>
+  		<tr>
+    		<td><%= entity.id %></td>
+			<td><%= link_to entity.name, entity %></td>
+			<td><%= entity.opinions.size %></td>
+  		</tr>
+		<% end %>
+	</table>
+
+<br />
+
+<%= link_to 'Nova Entidade »', new_entity_path %>
+
+</div>

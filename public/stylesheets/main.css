@@ -1,0 +1,136 @@
+body{
+	font-family:Calibri;
+}
+
+h1 {
+	color:#FF7400;
+}
+
+#general {
+	margin: auto;
+	width: 980px;
+}
+
+#general a {
+	color:#36393D;
+	font-style:none;
+}
+
+#general a:hover {
+	color:#36393D;
+}
+
+	#entities {
+		margin:20px;
+	}
+	
+		#entities table {
+			text-align:center;
+			width:100%;
+		}
+	
+			#entities table thead {
+				background-color:#36393D;
+				color:white;
+				padding:5px;
+			}
+			
+			#entities table tr {
+			}
+			
+			#entities table tr td {
+				border-bottom:1px dashed #aaa;
+				padding:5px;
+			}
+			
+	#tabs {
+	}
+	
+		#tabs ul {
+		}
+				
+		#tabs ul li {
+			font-size:11px;
+		}
+			
+			.opinions table {
+				text-align:justify;
+				width:100%;
+			}
+
+				.opinions table thead {
+					background-color:#36393D;
+					color:white;
+					padding:5px;
+					font-size:12px;
+				}
+				
+					.opinions table thead th {
+						padding:5px;
+						padding-left:15px;
+						padding-right:15px;
+					}
+
+				.opinions table tr {
+				}
+
+				.opinions table tr td {
+					border-bottom:1px dashed #aaa;
+					padding:5px;
+					font-size:10px;
+				}
+				
+	#slang_words {
+		margin:20px;
+	}
+
+		#slang_words table {
+			text-align:center;
+			width:100%;
+		}
+
+			#slang_words table thead {
+				background-color:#36393D;
+				color:white;
+				padding:5px;
+			}
+
+			#slang_words table tr {
+			}
+
+				#slang_words table tr td {
+					border-bottom:1px dashed #aaa;
+					padding:5px;
+				}
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+#notice {
+  color: green;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 1px solid #36393D;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  padding: 5px 5px 5px 15px;
+  font-size: 13px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #36393D;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}

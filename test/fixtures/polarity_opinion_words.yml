@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  opinion_id: 
+  polarity: MyString
+  word: MyString
+
+two:
+  opinion_id: 
+  polarity: MyString
+  word: MyString

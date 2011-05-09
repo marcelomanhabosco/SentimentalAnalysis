@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  opinion_id: 1
+  cleaned_opinion_text: MyText
+
+two:
+  opinion_id: 1
+  cleaned_opinion_text: MyText
