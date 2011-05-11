@@ -107,6 +107,25 @@ div.field, div.actions {
   margin-bottom: 10px;
 }
 
+div#results {
+	width:100%;
+}
+
+div#results p{
+	width:25%;
+	float:left;
+}
+
+div#results p h3{
+	color: #36393D;
+	font-weight: bold;
+}
+
+div#results p label{
+	color: #36393D;
+	font-weight: bold;
+}
+
 #notice {
   color: green;
 }

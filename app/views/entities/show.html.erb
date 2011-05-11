@@ -7,7 +7,7 @@
 
 <br>
 
-<% pos, neu, neg, acertos, erros = 0, 0, 0, 0, 0 %>
+<% acertos, erros = 0, 0 %>
 
 <script type="text/javascript">
 	$(function() {
@@ -18,9 +18,11 @@
 <div id="tabs">
 	<ul>
 		<li><a href="#opinions">Opiniões</a></li>
-		<li><a href="#corrected-opinions">Correção</a></li>
-		<li><a href="#cleaned-opinions">Limpeza</a></li>
-		<li><a href="#affective-polarity">Valencia Afetiva</a></li>
+		<li><a href="#corrected-opinions">Fase de Correção</a></li>
+		<li><a href="#cleaned-opinions">Fase da Limpeza</a></li>
+		<li><a href="#affective-polarity">Valência Afetiva Obtida</a></li>
+		<li><a href="#results-avaliation">Avaliação dos Resultados</a></li>
+		<li><a href="#resumed-results">Resultados Resumidos</a></li>
 	</ul>
 	
 	<div id="opinions" class="opinions">
@@ -88,14 +90,37 @@
 		<table>
 		  <thead>
 		    <th>Nº</th>
-				<th>Score de Humanos</th>
-				<th>Valência cedida pelo sistema</th>
-				<th>Acertos/Erros</th>
+				<th>Opinião</th>
 				<th>Palavras/Valências</th>
 		  </thead>
 		<% @i=1 %>
 		<% @opinions.each do |opinion| %>
-      <% polarity_opinion_word = PolarityOpinionWord.where(:opinion_id => opinion.id).all %>
+			<% polarity_opinion_word = PolarityOpinionWord.where(:opinion_id => opinion.id).all %>
+		  <tr>
+		    <td><%= @i %></td>
+				<td><%= opinion.opinion_text %></td>
+				<td>
+					<% polarity_opinion_word.each do |pow| %>
+						<%= "#{pow.word.force_encoding("UTF-8")} ~ #{pow.polarity.force_encoding("UTF-8")} | " %>
+					<% end unless polarity_opinion_word.nil? %>
+				</td>
+		  </tr>
+		  <% @i = @i + 1 %>
+		<% end %>
+		</table>
+	</div>
+	
+	<div id="results-avaliation" class="opinions">
+		<table>
+			<thead>
+				<th>Nº</th>
+				<th>Score de Humanos</th>
+				<th>Valência cedida pelo sistema</th>
+				<th>Resultado</th>
+		  </thead>
+		<% @i=1 %>
+		<% @opinions.each do |opinion| %>
+			<% polarity_opinion_word = PolarityOpinionWord.where(:opinion_id => opinion.id).all %>
 			<% negative,positive = 0,0 %>
 			<% polarity_opinion_word.each do |pow| %>
 				<% if pow.polarity == "+" %>
@@ -116,13 +141,10 @@
 				<% end %>
 				<% if positive > negative %>
 					<td style="background-color:#CDEB8B;"><b><%= ss = "Positivo" %></b></td>
-					<% pos = pos+1 %>
 				 <% elsif positive == negative %>
 					<td><b><%= ss = "Neutro" %></b></td>
-					<% neu = neu+1 %>
 				<% else %>
 					<td style="background-color:#E35B5B;"><b><%= ss = "Negativo" %></b></td>
-					<% neg =neg+1 %>
 				<% end %>
 				<% if hs == ss %>
 					<td style='background-color:#CDEB8B;'><b>Acerto</b></td>
@@ -131,21 +153,58 @@
 					<td style="background-color:#E35B5B;"><b>Erro</b></td>
 					<% erros = erros+1 %>
 				<% end %>
-				<td>
-					<% polarity_opinion_word.each do |pow| %>
-						<%= "#{pow.word.force_encoding("UTF-8")} ~ #{pow.polarity.force_encoding("UTF-8")} | " %>
-					<% end unless polarity_opinion_word.nil? %>
-				</td>
 		  </tr>
 		  <% @i = @i + 1 %>
 		<% end %>
 		</table>
-		
-		<p> Positivos: <%= pos %> </p>
-		<p> Neutros: <%= neu %> </p>
-		<p> Negativos: <%= neg %> </p>
-		<p> Acertos: <%= acertos %> </p>
-		<p> Erros: <%= erros %> </p>
 	</div>
 	
+	<div id="resumed-results" class="opinions">
+		<p> <label>Acertos:</label> <%= acertos %> </p>
+		<p> <label>Erros:</label> <%= erros %> </p>
+		<% taxa = (acertos.to_f / @i.to_f)*100 %>
+		<p> <label>Taxa de Acerto:</label> <%= number_to_percentage(taxa) %></p>
+			<script type="text/javascript">
+
+						var chart;
+						$(document).ready(function() {
+							chart = new Highcharts.Chart({
+								chart: {
+									renderTo: 'container',
+									plotBackgroundColor: null,
+									plotBorderWidth: null,
+									plotShadow: false
+								},
+								title: {
+									text: ' '
+								},
+								tooltip: {
+									formatter: function() {
+										return '<b>'+ this.point.name +'</b>: '+ this.y;
+									}
+								},
+								plotOptions: {
+									pie: {
+										allowPointSelect: true,
+										cursor: 'pointer',
+										dataLabels: {
+											enabled: true
+										},
+										showInLegend: true
+									}
+								},
+							    series: [{
+									type: 'pie',
+									name: ' ',
+									data: [
+										['Acertos',   <%= acertos %>],
+										['Erros',      <%= erros %>]
+									]
+								}]
+							});
+						});
+
+					</script>
+			<div id="container" style="width: 600px; height: 400px; margin: 0 auto; margin-bottom: 30px;"></div>
+	</div>
 </div>
