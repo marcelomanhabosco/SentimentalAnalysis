@@ -11,7 +11,7 @@
 		<% @entities.each do |entity| %>
   		<tr>
     		<td><%= entity.id %></td>
-			<td><%= link_to entity.name, entity %></td>
+			<td><%= link_to entity.name.force_encoding("UTF-8"), entity %></td>
 			<td><%= entity.opinions.size %></td>
   		</tr>
 		<% end %>

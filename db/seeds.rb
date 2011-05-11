@@ -47,10 +47,103 @@ File.open(caminho + 'triplos.txt').each_with_index do |linha, index|
 end
 
 # Entidades e Opiniões
-Entity.create!(:id => 1, :name => "A Origem (Inception)")
+Entity.create!(:id => 1, :name => "2012")
+Entity.create!(:id => 2, :name => "300")
+Entity.create!(:id => 3, :name => "A Origem (Inception)")
+Entity.create!(:id => 4, :name => "Avatar")
+Entity.create!(:id => 5, :name => "Crepusculo")
+Entity.create!(:id => 6, :name => "Crepusculo Lua Nova")
+Entity.create!(:id => 7, :name => "Guerra ao Terror")
+Entity.create!(:id => 8, :name => "Harry Potter")
+Entity.create!(:id => 9, :name => "Paranormal")
+Entity.create!(:id => 10, :name => "Premonição")
 
-File.open(caminho + 'opinioes.txt').each_with_index do |linha, index|
-  entity_id, human_score, opinion_text = linha.chomp.split(" | ")
-  puts "Importando Opiniao #{index}"
-  Opinion.create!(:entity_id => entity_id, :human_score => human_score, :opinion_text => opinion_text)
+File.open(caminho + '/opinioes/2012-positivas.txt').each_with_index do |linha, index|
+  puts "Importando Opiniao - 2012 #{index}"
+  Opinion.create!(:entity_id => 1, :human_score => "Positivo", :opinion_text => linha)
+end
+File.open(caminho + '/opinioes/2012-negativas.txt').each_with_index do |linha, index|
+  puts "Importando Opiniao - 2012 #{index}"
+  Opinion.create!(:entity_id => 1, :human_score => "Negativo", :opinion_text => linha)
+end
+
+File.open(caminho + '/opinioes/300-positivas.txt').each_with_index do |linha, index|
+  puts "Importando Opiniao - 300 #{index}"
+  Opinion.create!(:entity_id => 2, :human_score => "Positivo", :opinion_text => linha)
+end
+File.open(caminho + '/opinioes/300-negativas.txt').each_with_index do |linha, index|
+  puts "Importando Opiniao - 300 #{index}"
+  Opinion.create!(:entity_id => 2, :human_score => "Negativo", :opinion_text => linha)
+end
+
+File.open(caminho + '/opinioes/A_Origem-positivas.txt').each_with_index do |linha, index|
+  puts "Importando Opiniao - A Origem #{index}"
+  Opinion.create!(:entity_id => 3, :human_score => "Positivo", :opinion_text => linha)
+end
+File.open(caminho + '/opinioes/A_Origem-negativas.txt').each_with_index do |linha, index|
+  puts "Importando Opiniao - A Origem #{index}"
+  Opinion.create!(:entity_id => 3, :human_score => "Negativo", :opinion_text => linha)
+end
+
+File.open(caminho + '/opinioes/Avatar-positivas.txt').each_with_index do |linha, index|
+  puts "Importando Opiniao - Avatar #{index}"
+  Opinion.create!(:entity_id => 4, :human_score => "Positivo", :opinion_text => linha)
+end
+File.open(caminho + '/opinioes/Avatar-negativas.txt').each_with_index do |linha, index|
+  puts "Importando Opiniao - Avatar #{index}"
+  Opinion.create!(:entity_id => 4, :human_score => "Negativo", :opinion_text => linha)
+end
+
+File.open(caminho + '/opinioes/Crepusculo-positivas.txt').each_with_index do |linha, index|
+  puts "Importando Opiniao - Crepusculo #{index}"
+  Opinion.create!(:entity_id => 5, :human_score => "Positivo", :opinion_text => linha)
+end
+File.open(caminho + '/opinioes/Crepusculo-negativas.txt').each_with_index do |linha, index|
+  puts "Importando Opiniao - Crepusculo #{index}"
+  Opinion.create!(:entity_id => 5, :human_score => "Negativo", :opinion_text => linha)
+end
+
+File.open(caminho + '/opinioes/Crepusculo_Lua_Nova-positivas.txt').each_with_index do |linha, index|
+  puts "Importando Opiniao - Crepusculo Lua Nova #{index}"
+  Opinion.create!(:entity_id => 6, :human_score => "Positivo", :opinion_text => linha)
+end
+File.open(caminho + '/opinioes/Crepusculo_Lua_Nova-negativas.txt').each_with_index do |linha, index|
+  puts "Importando Opiniao - Crepusculo Lua Nova #{index}"
+  Opinion.create!(:entity_id => 6, :human_score => "Negativo", :opinion_text => linha)
+end
+
+File.open(caminho + '/opinioes/Guerra-positivas.txt').each_with_index do |linha, index|
+  puts "Importando Opiniao - Guerra ao Terror #{index}"
+  Opinion.create!(:entity_id => 7, :human_score => "Positivo", :opinion_text => linha)
+end
+File.open(caminho + '/opinioes/Guerra-negativas.txt').each_with_index do |linha, index|
+  puts "Importando Opiniao - Guerra ao Terror #{index}"
+  Opinion.create!(:entity_id => 7, :human_score => "Negativo", :opinion_text => linha)
+end
+
+File.open(caminho + '/opinioes/Harry-positivas.txt').each_with_index do |linha, index|
+  puts "Importando Opiniao - Harry Potter #{index}"
+  Opinion.create!(:entity_id => 8, :human_score => "Positivo", :opinion_text => linha)
+end
+File.open(caminho + '/opinioes/Harry-negativas.txt').each_with_index do |linha, index|
+  puts "Importando Opiniao - Harry Potter #{index}"
+  Opinion.create!(:entity_id => 8, :human_score => "Negativo", :opinion_text => linha)
+end
+
+File.open(caminho + '/opinioes/Paranormal-positivas.txt').each_with_index do |linha, index|
+  puts "Importando Opiniao - Paranormal #{index}"
+  Opinion.create!(:entity_id => 9, :human_score => "Positivo", :opinion_text => linha)
+end
+File.open(caminho + '/opinioes/Paranormal-negativas.txt').each_with_index do |linha, index|
+  puts "Importando Opiniao - Paranormal #{index}"
+  Opinion.create!(:entity_id => 9, :human_score => "Negativo", :opinion_text => linha)
+end
+
+File.open(caminho + '/opinioes/Premonicao-positivas.txt').each_with_index do |linha, index|
+  puts "Importando Opiniao - Premonicao #{index}"
+  Opinion.create!(:entity_id => 10, :human_score => "Positivo", :opinion_text => linha)
+end
+File.open(caminho + '/opinioes/Premonicao-negativas.txt').each_with_index do |linha, index|
+  puts "Importando Opiniao - Premonicao #{index}"
+  Opinion.create!(:entity_id => 10, :human_score => "Negativo", :opinion_text => linha)
 end
