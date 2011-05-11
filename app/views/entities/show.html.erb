@@ -7,6 +7,8 @@
 
 <br>
 
+<% pos, neu, neg, acertos, erros = 0, 0, 0, 0, 0 %>
+
 <script type="text/javascript">
 	$(function() {
 		$("#tabs").tabs();
@@ -113,15 +115,20 @@
 				<% end %>
 				<% if positive > negative %>
 					<td style="background-color:#CDEB8B;"><b><%= ss = "Positivo" %></b></td>
+					<% pos = pos+1 %>
 				 <% elsif positive == negative %>
 					<td><b><%= ss = "Neutro" %></b></td>
+					<% neu = neu+1 %>
 				<% else %>
 					<td style="background-color:#E35B5B;"><b><%= ss = "Negativo" %></b></td>
+					<% neg =neg+1 %>
 				<% end %>
 				<% if hs == ss %>
 					<td style='background-color:#CDEB8B;'><b>Acerto</b></td>
+					<% acertos = acertos+1 %>
 				<% else %>
 					<td style="background-color:#E35B5B;"><b>Erro</b></td>
+					<% erros = erros+1 %>
 				<% end %>
 				<td>
 					<% polarity_opinion_word.each do |pow| %>
@@ -132,6 +139,12 @@
 		  <% @i = @i + 1 %>
 		<% end %>
 		</table>
+		
+		<p> Positivos: <%= pos %> </p>
+		<p> Neutros: <%= neu %> </p>
+		<p> Negativos: <%= neg %> </p>
+		<p> Acertos: <%= acertos %> </p>
+		<p> Erros: <%= erros %> </p>
 	</div>
 	
 </div>
