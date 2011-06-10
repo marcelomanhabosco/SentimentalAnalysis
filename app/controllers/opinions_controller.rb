@@ -11,9 +11,10 @@ class OpinionsController < ApplicationController
   end
   
   def process_opinions
-    remove_all
-    
     opinions = Opinion.find(:all, :conditions => ["entity_id LIKE ?", params[:id]])
+    
+    remove_all(opinions) if opinions
+    
     correct_opinions(opinions)
     
     corrected_opinions = Array.new
@@ -31,7 +32,7 @@ class OpinionsController < ApplicationController
       cleaned_opinions << cleaned_opinion unless cleaned_opinion.nil?
     end
     
-    define_polarity(cleaned_opinions)
+    proccess_sentences(corrected_opinions)
     
     @entity = Entity.find(params[:id])
     redirect_to @entity
@@ -79,7 +80,7 @@ class OpinionsController < ApplicationController
   
   def spelling(op)
     op = op.force_encoding "ASCII-8BIT"
-    if @dict.spell(op)
+    if @dict.spell(op.gsub(/[\,\.\?\!\:\;\'\"\_\|\<\>]/, " ")) or @dict.spell(op.gsub(/[\,\.\?\!\:\;\'\"\_\|\<\>]/, " ").capitalize)
       @correct_opinion = @correct_opinion + op + " "
     else
       #op_iso = Iconv.conv('ISO-8859-2','ASCII//translit', op)
@@ -87,8 +88,13 @@ class OpinionsController < ApplicationController
       if is_lang != false
         @correct_opinion = @correct_opinion + is_lang.to_s + " "
       else
-        suggestions = @dict.suggest(op)
-        @correct_opinion  = @correct_opinion + suggestions[0].to_s + " ";
+        affective_word = AffectiveWord.find(:first, :conditions => ['word LIKE ?', op.singularize]) || nil
+        if affective_word.nil?
+          @correct_opinion = @correct_opinion + op + " "
+        else
+          suggestions = @dict.suggest(op)
+          @correct_opinion  = @correct_opinion + suggestions[0].to_s + " ";
+        end
       end
     end
   end
@@ -102,20 +108,86 @@ class OpinionsController < ApplicationController
     end
   end
   
-  def define_polarity(cleaned_opinions)
+  def proccess_sentences(cleaned_opinions)
     cleaned_opinions.each do |cleaned_op|
-      cleaned_op.cleaned_opinion_text.split(" ").each do |op|
-        affective_word = AffectiveWord.where(:word => op).first || nil
-        if affective_word.nil?
-          find_synonym_or_antonym(op, cleaned_op.opinion_id)
-        else
-          PolarityOpinionWord.create(:opinion_id => cleaned_op.opinion_id, :polarity => affective_word.polarity, :word => op) unless affective_word.nil?
+      i = 1
+      sentence = 1
+      in_pos, final_pos = nil, nil
+      cleaned_op.corrected_opinion_text.split(/[\,\.\?\!\:\;]/).each do |op|
+        string = ""
+        in_pos = i
+        op.split(" ").each do |word|
+          i= i+1
+          final_pos = i
+          string = string +" "+ word.to_s
+        end
+        os = OpinionSentence.create(:opinion_id => cleaned_op.opinion_id, :text => string, :initial_position => in_pos, :final_position => final_pos, :polarity => nil, :sentence_count => sentence) unless string.size < 3
+        if os
+          polarity = return_phrase_polarity(os)
+          analize_sentence(os, polarity)
+          sintetize_sentence_polarity(os)
+          sentence = sentence + 1
         end
   		end
     end
   end
   
+  def sintetize_sentence_polarity(os)
+    positive, negative = 0, 0
+    PolarityOpinionWord.where(:opinion_sentence_id => os.id).each do |pow|
+      if pow.polarity == "+"
+		    positive += 1
+      else
+        negative += 1
+      end
+    end
+    if positive > negative
+      polarity = "+"
+    elsif positive == negative
+      polarity = ""
+    else
+      polarity = "-"
+    end
+    os.update_attribute(:polarity, polarity)
+  end
+  
+  def analize_sentence(os, polarity)
+    i = 0
+    os.text.split(" ").each do |word|
+      i= i+1
+      if word.force_encoding("UTF-8") == "não"
+        p = PolarityOpinionWord.where(:opinion_sentence_id => os.id).where("position >= ?", i).first
+        p.update_attributes(:polarity => change_polarity(p.polarity), :word => "#{word.force_encoding("ASCII-8BIT")} #{p.word}") if p
+      end
+      if i == 1 and (word == "mas" or word == "porém")
+        p = PolarityOpinionWord.where(:opinion_sentence_id => os.id).where("position >= ?", i).first || nil
+        p.update_attributes(:polarity => change_polarity(p.polarity), :word => "#{word} #{p.word}") unless p == nil
+      elsif word == "mas" or word == "porém"
+        p = OpinionSentence.where(:opinion_id => os.opinion_id).where("sentence_count = ?", os.sentence_count-1).first || nil
+        if p != nil
+          p.update_attributes(:polarity => change_polarity(p.polarity)) unless p == nil
+        else
+          p2 = PolarityOpinionWord.where(:opinion_sentence_id => os.id).where("position >= ?", i).first || nil
+          p2.update_attributes(:polarity => change_polarity(p2.polarity), :word => "#{word} #{p2.word}") unless p2 == nil
+        end
+      end
+    end
+  end
+  
+  def return_phrase_polarity(os)
+    i = os.initial_position
+    affective_word = nil
+    os.text.split(" ").each do |word|
+      affective_word = AffectiveWord.find(:first, :conditions => ['word LIKE ?', word.singularize]) || nil
+
+      PolarityOpinionWord.create(:word => affective_word.word, :polarity => affective_word.polarity, :opinion_sentence_id => os.id, :position =>i) unless affective_word == nil
+      i= i+1
+    end
+    affective_word
+  end
+  
   def find_synonym_or_antonym(word, opinion_id)
+    polarity = nil
     words = WordRelation.where(:word => word).all
     done = false
     words.each do |relation|
@@ -123,27 +195,21 @@ class OpinionsController < ApplicationController
       unless affective_word.nil? or done == true
         polarity = return_polarity(affective_word, relation.relation)
         done = true
-        PolarityOpinionWord.create(:opinion_id => opinion_id, :polarity => affective_word.polarity, :word => word) unless affective_word.nil?
       end
     end
+    polarity
   end
   
   def remove_symbols(opinion)
     return opinion.to_s.gsub(/[\,\.\?\!\:\;\'\"\_\|\<\>]/, " ")
   end
   
-  def remove_all
-    CorrectedOpinion.all.each do |c|
-      c.destroy
-    end
-    
-    CleanedOpinion.all.each do |c|
-      c.destroy
-    end
-    
-    PolarityOpinionWord.all.each do |p|
-      p.destroy
-    end
+  def remove_all(opinions)
+    opinions.each do |op|
+      CorrectedOpinion.destroy_all(:opinion_id => op.id)
+      CleanedOpinion.destroy_all(:opinion_id => op.id)
+      OpinionSentence.destroy_all(:opinion_id => op.id)
+    end 
   end
   
   def return_polarity(aword, relation)

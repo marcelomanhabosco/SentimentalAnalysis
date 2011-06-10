@@ -138,8 +138,16 @@ bem-aventurança | +
 benefício | +
 benigna | +
 benigno | +
+besta | -
+bestas | -
 boa | +
+boas | +
+boba | -
+bobas | -
+bobo | -
+bobos | -
 bom | +
+bons | +
 bom humor | +
 bom o suficiente | +
 bondade | +
@@ -270,6 +278,8 @@ digno | +
 discrepante | -
 dissimulada | -
 dissimulado | -
+divertida | +
+divertido | +
 dívida | -
 doce | +
 doença | -
@@ -319,6 +329,8 @@ esplêndida | +
 esplêndido | +
 esplendor | +
 estima | +
+estragado | -
+estragou | -
 estranheza | -
 estressada | -
 estressado | -
@@ -369,6 +381,9 @@ gostei | +
 gosto | +
 graciosa | +
 gracioso | +
+grande | +
+grandioso | +
+grandiosa | +
 grata | +
 gratidão | +
 gratificação | +
@@ -376,6 +391,10 @@ gratificante | +
 grato | +
 grosseira | -
 grosseiro | -
+hilária | +
+hilário | +
+hilárias | +
+hilários | +
 hedionda | -
 hediondo | -
 honrada | +
@@ -470,6 +489,7 @@ lastimoso | -
 legal | +
 linda | +
 lindo | +
+lixo | -
 louca | -
 louca de raiva | -
 louco | -
@@ -556,8 +576,6 @@ patos | -
 pavor | -
 pavorosa | -
 pavoroso | -
-pena | -
-pena | -
 penitência | -
 penitente | -
 penosa | -
@@ -572,6 +590,8 @@ perturbado | -
 perturbado | -
 pesarosa | -
 pesaroso | -
+péssima | -
+péssimo | -
 pestilenta | -
 pestilento | -
 piedade | -
@@ -590,6 +610,8 @@ preocupante | -
 presunção | -
 presunçosa | -
 presunçoso | -
+previsível | -
+previsíveis | -
 problema | -
 problema | -
 problemática | -
@@ -611,6 +633,8 @@ receosa | -
 receoso | -
 recomendado | +
 recomendo | +
+ridícula | -
+ridículo | -
 regozijo | -
 remorso | -
 repreendível | -
@@ -625,7 +649,7 @@ revoltada | -
 revoltado | -
 romântica | +
 romântico | +
-ruim | +
+ruim | -
 ruindade | -
 satisfação | -
 satisfeita | -
@@ -633,6 +657,8 @@ satisfeito | -
 saudável | +
 sem conforto | -
 sem sentido | -
+sensacional | +
+sensacionais | +
 sentimento de culpa | -
 sentimento de culpa | -
 severa | -

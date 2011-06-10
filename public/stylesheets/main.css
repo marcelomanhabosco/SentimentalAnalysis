@@ -107,21 +107,21 @@ div.field, div.actions {
   margin-bottom: 10px;
 }
 
-div#results {
+div#resumed-results {
 	width:100%;
 }
 
-div#results p{
+div#resumed-results p{
 	width:25%;
 	float:left;
 }
 
-div#results p h3{
+div#resumed-results p h3{
 	color: #36393D;
 	font-weight: bold;
 }
 
-div#results p label{
+div#resumed-results p label{
 	color: #36393D;
 	font-weight: bold;
 }

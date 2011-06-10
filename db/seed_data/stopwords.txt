@@ -115,7 +115,6 @@ la
 lhe
 lhes
 lo
-mas
 me
 mesma
 mesmas
@@ -176,7 +175,6 @@ podia
 podiam
 pois
 por
-porém
 porque
 posso
 pouca

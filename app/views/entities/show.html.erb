@@ -45,6 +45,9 @@
 		  <div class="field">
 		    Adicionar Opinião<br />
 		    <%= f.text_area :opinion_text, :rows => 6, :cols => 60 %>
+				<br><br>
+				Score Humano<br />
+				<%= f.select :human_score, %w(Positivo Negativo) %>
 		  </div>
 		  <div class="actions">
 		    <%= f.submit "Adicionar" %>
@@ -95,17 +98,20 @@
 		  </thead>
 		<% @i=1 %>
 		<% @opinions.each do |opinion| %>
-			<% polarity_opinion_word = PolarityOpinionWord.where(:opinion_id => opinion.id).all %>
-		  <tr>
-		    <td><%= @i %></td>
-				<td><%= opinion.opinion_text %></td>
-				<td>
-					<% polarity_opinion_word.each do |pow| %>
-						<%= "#{pow.word.force_encoding("UTF-8")} ~ #{pow.polarity.force_encoding("UTF-8")} | " %>
-					<% end unless polarity_opinion_word.nil? %>
-				</td>
-		  </tr>
-		  <% @i = @i + 1 %>
+		  	<tr>
+		    	<td><%= @i %></td>
+					<td><%= opinion.opinion_text %></td>
+					<td> Sentença:
+						<% OpinionSentence.where(:opinion_id => opinion.id).each do |sentence| %>
+							<%= "#{sentence.polarity.force_encoding("UTF-8")} (  " %>
+							<% PolarityOpinionWord.where(:opinion_sentence_id => sentence.id).each do |pow| %>
+								<%= "#{pow.word.force_encoding("UTF-8")} ~ #{pow.polarity.force_encoding("UTF-8")} " %>
+							<% end %>
+							<%= ") |" %>
+						<% end %>
+					</td>
+		  		</tr>
+		  	<% @i = @i + 1 %>
 		<% end %>
 		</table>
 	</div>
@@ -120,41 +126,40 @@
 		  </thead>
 		<% @i=1 %>
 		<% @opinions.each do |opinion| %>
-			<% polarity_opinion_word = PolarityOpinionWord.where(:opinion_id => opinion.id).all %>
 			<% negative,positive = 0,0 %>
-			<% polarity_opinion_word.each do |pow| %>
-				<% if pow.polarity == "+" %>
-					<% positive += 1%>
-				<% else %>
-					<% negative += 1%>
+			<% OpinionSentence.where(:opinion_id => opinion.id).each do |sentence| %>
+				<% if sentence.polarity == "+" %>
+					<% positive = positive + 1%>
+				<% elsif sentence.polarity == "-" %>
+					<% negative = negative + 1%>
 				<% end %>
-			<% end unless polarity_opinion_word.nil? %>
-		  <tr>
-		    <td><%= @i %></td>
-				<% hs = opinion.human_score.force_encoding("UTF-8") %>
-				<% if opinion.human_score.force_encoding("UTF-8") == "Positivo" %>
-					<td style='background-color:#CDEB8B;'><b><%= hs %></td>
-				<% elsif opinion.human_score.force_encoding("UTF-8") == "Neutro" %>
-					<td><b><%= hs %></b></td>
-				<% else %>
-					<td style="background-color:#E35B5B;"><b><%= hs %></b></td>
-				<% end %>
-				<% if positive > negative %>
-					<td style="background-color:#CDEB8B;"><b><%= ss = "Positivo" %></b></td>
-				 <% elsif positive == negative %>
-					<td><b><%= ss = "Neutro" %></b></td>
-				<% else %>
-					<td style="background-color:#E35B5B;"><b><%= ss = "Negativo" %></b></td>
-				<% end %>
-				<% if hs == ss %>
-					<td style='background-color:#CDEB8B;'><b>Acerto</b></td>
-					<% acertos = acertos+1 %>
-				<% else %>
-					<td style="background-color:#E35B5B;"><b>Erro</b></td>
-					<% erros = erros+1 %>
-				<% end %>
-		  </tr>
-		  <% @i = @i + 1 %>
+			<% end %>
+		  	<tr>
+		    	<td><%= @i %></td>
+					<% hs = opinion.human_score.force_encoding("UTF-8") %>
+					<% if opinion.human_score.force_encoding("UTF-8") == "Positivo" %>
+						<td style='background-color:#CDEB8B;'><b><%= hs %></td>
+					<% elsif opinion.human_score.force_encoding("UTF-8") == "Neutro" %>
+						<td><b><%= hs %></b></td>
+					<% else %>
+						<td style="background-color:#E35B5B;"><b><%= hs %></b></td>
+					<% end %>
+					<% if positive > negative %>
+						<td style="background-color:#CDEB8B;"><b><%= ss = "Positivo" %></b></td>
+				 	<% elsif positive == negative %>
+						<td><b><%= ss = "Neutro" %></b></td>
+					<% else %>
+						<td style="background-color:#E35B5B;"><b><%= ss = "Negativo" %></b></td>
+					<% end %>
+					<% if hs == ss %>
+						<td style='background-color:#CDEB8B;'><b>Acerto</b></td>
+						<% acertos = acertos+1 %>
+					<% else %>
+						<td style="background-color:#E35B5B;"><b>Erro</b></td>
+						<% erros = erros+1 %>
+					<% end %>
+		  	</tr>
+		  	<% @i = @i + 1 %>
 		<% end %>
 		</table>
 	</div>
@@ -162,7 +167,7 @@
 	<div id="resumed-results" class="opinions">
 		<p> <label>Acertos:</label> <%= acertos %> </p>
 		<p> <label>Erros:</label> <%= erros %> </p>
-		<% taxa = (acertos.to_f / @i.to_f)*100 %>
+		<% taxa = (acertos.to_f / (@i-1).to_f)*100 %>
 		<p> <label>Taxa de Acerto:</label> <%= number_to_percentage(taxa) %></p>
 			<script type="text/javascript">
 
