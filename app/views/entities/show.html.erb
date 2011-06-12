@@ -1,7 +1,9 @@
 <div id="entity_data">
 	<h1>Opiniões da Entidade :: <%= @entity.name.force_encoding("UTF-8") %></h1>
 
-	<%= button_to "Processar", :controller => :opinions, :action => :process_opinions, :id => @entity.id %>
+	<form method="post" action="/opinions/process_opinions/<%= @entity.id %>" class="button_to">
+		<input type="submit" value="Processar", class="button right" />
+	</form>
 	<%= link_to '« Voltar', entities_path %>
 </div>
 
@@ -50,7 +52,7 @@
 				<%= f.select :human_score, %w(Positivo Negativo) %>
 		  </div>
 		  <div class="actions">
-		    <%= f.submit "Adicionar" %>
+		    <%= f.submit "Adicionar", :class => "button" %>
 		  </div>
 		<% end %>
 	</div>

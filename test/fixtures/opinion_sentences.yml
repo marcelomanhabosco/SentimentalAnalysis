@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  initial_position: 1
+  final_position: 1
+  text: MyString
+  polarity: 1.5
+  opinion_id: 1
+
+two:
+  initial_position: 1
+  final_position: 1
+  text: MyString
+  polarity: 1.5
+  opinion_id: 1

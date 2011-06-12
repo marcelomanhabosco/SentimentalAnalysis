@@ -1,5 +1,7 @@
-body{
-	font-family:Calibri;
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
 }
 
 h1 {
@@ -8,7 +10,7 @@ h1 {
 
 #general {
 	margin: auto;
-	width: 980px;
+	width: 820px;
 }
 
 #general a {
@@ -152,4 +154,23 @@ div#resumed-results p label{
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
+}
+
+.button {
+	font-family: Verdana, Arial, sans-serif;
+	display: inline-block;
+	background: #ccc url('/images/bg-button-gray.gif') top left repeat-x;
+	border: 1px solid #484848;
+	padding: 4px 7px 4px 7px !important;
+	color: #fff;
+	font-size: 11px !important;
+}
+.right{
+	float:right;
+}
+.button:hover {
+	text-decoration: underline;
+}
+.button:active {
+	padding: 5px 7px 3px 7px !important;
 }
