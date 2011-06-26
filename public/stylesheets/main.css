@@ -111,6 +111,7 @@ div.field, div.actions {
 
 div#resumed-results {
 	width:100%;
+	min-height: 780px;
 }
 
 div#resumed-results p{

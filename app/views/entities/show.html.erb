@@ -127,6 +127,7 @@
 				<th>Resultado</th>
 		  </thead>
 		<% @i=1 %>
+		<% pp, np, pe, ne = 0, 0, 0, 0 %>
 		<% @opinions.each do |opinion| %>
 			<% negative,positive = 0,0 %>
 			<% OpinionSentence.where(:opinion_id => opinion.id).each do |sentence| %>
@@ -154,18 +155,27 @@
 						<td style="background-color:#E35B5B;"><b><%= ss = "Negativo" %></b></td>
 					<% end %>
 					<% if hs == ss %>
-						<td style='background-color:#CDEB8B;'><b>Acerto</b></td>
+						<td style='color:green;'><b>Acerto</b></td>
 						<% acertos = acertos+1 %>
+						<% if opinion.human_score.force_encoding("UTF-8") == "Positivo" %>
+							<% pp = pp+1 %>
+						<% else %>
+							<% np = np+1 %>
+						<% end%>
 					<% else %>
-						<td style="background-color:#E35B5B;"><b>Erro</b></td>
+						<td style="color:red;"><b>Erro</b></td>
 						<% erros = erros+1 %>
+							<% if opinion.human_score.force_encoding("UTF-8") == "Positivo" %>
+								<% pe = pe+1 %>
+							<% else %>
+								<% ne = ne+1 %>
+							<% end%>
 					<% end %>
 		  	</tr>
 		  	<% @i = @i + 1 %>
 		<% end %>
 		</table>
 	</div>
-	
 	<div id="resumed-results" class="opinions">
 		<p> <label>Acertos:</label> <%= acertos %> </p>
 		<p> <label>Erros:</label> <%= erros %> </p>
@@ -183,7 +193,7 @@
 									plotShadow: false
 								},
 								title: {
-									text: ' '
+									text: 'Taxa de Acertos'
 								},
 								tooltip: {
 									formatter: function() {
@@ -213,5 +223,92 @@
 
 					</script>
 			<div id="container" style="width: 600px; height: 400px; margin: 0 auto; margin-bottom: 30px;"></div>
+			<br><br>
+			<div style="text-align:center">
+			<script type="text/javascript">
+
+						var chart;
+						$(document).ready(function() {
+							chart = new Highcharts.Chart({
+								chart: {
+									renderTo: 'container2',
+									plotBackgroundColor: null,
+									plotBorderWidth: null,
+									plotShadow: false
+								},
+								title: {
+									text: 'Opiniões positivas'
+								},
+								tooltip: {
+									formatter: function() {
+										return '<b>'+ this.point.name +'</b>: '+ this.y;
+									}
+								},
+								plotOptions: {
+									pie: {
+										allowPointSelect: true,
+										cursor: 'pointer',
+										dataLabels: {
+											enabled: true
+										},
+										showInLegend: true
+									}
+								},
+							    series: [{
+									type: 'pie',
+									name: ' ',
+									data: [
+										['Acertos',   <%= pp %>],
+										['Erros',      <%= pe %>]
+									]
+								}]
+							});
+						});
+
+					</script>
+			<div id="container2" style="width: 350px; height: 300px; margin: 0 auto; margin-bottom: 30px;float:left;padding-left:50px;"></div>
+			<script type="text/javascript">
+
+						var chart;
+						$(document).ready(function() {
+							chart = new Highcharts.Chart({
+								chart: {
+									renderTo: 'container3',
+									plotBackgroundColor: null,
+									plotBorderWidth: null,
+									plotShadow: false
+								},
+								title: {
+									text: 'Opiniões negativas'
+								},
+								tooltip: {
+									formatter: function() {
+										return '<b>'+ this.point.name +'</b>: '+ this.y;
+									}
+								},
+								plotOptions: {
+									pie: {
+										allowPointSelect: true,
+										cursor: 'pointer',
+										dataLabels: {
+											enabled: true
+										},
+										showInLegend: true
+									}
+								},
+							    series: [{
+									type: 'pie',
+									name: ' ',
+									data: [
+										['Acertos',   <%= np %>],
+										['Erros',      <%= ne %>]
+									]
+								}]
+							});
+						});
+
+					</script>
+			<div id="container3" style="width: 350px; height: 300px; margin: 0 auto; margin-bottom: 30px;float:left;"></div>
+			<div>
 	</div>
 </div>
