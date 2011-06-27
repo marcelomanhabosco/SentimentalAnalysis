@@ -1,720 +1,733 @@
-abafada | -
-abafado | -
-abalada | -
-abalado | -
-abandonada | -
-abandonado | -
-abatida | -
-abatido | -
-abençoada | +
-abençoado | +
-abjeta | -
-abjeto | -
-abominação | -
-abominável | -
-abrandamento | +
-abusiva | -
-abusivo | -
-acalmar | +
-acanhada | -
-acanhado | -
-acanhamento | -
-acrimonioso | -
-admiração | +
-admirada | +
-admirado | +
-admirável | +
-admirável | +
-adorável | +
-adorei | +
-adoro | +
-adversidade | -
-afeição | +
-afeiçoada | +
-afeiçoado | +
-afetuosa | +
-afetuoso | +
-aflição | -
-aflição | -
-afligem | -
-afligir | -
-aflita | -
-aflito | -
-afortunada | +
-afortunado | +
-agonia | -
-agoniada | -
-agoniado | -
-agonizante | -
-agonizar | -
-agradável | +
-agradecida | +
-agradecido | +
-ajuda | +
-alarmante | -
-alegre | +
-alegria | +
-alegria pelo mau alheio | +
-aliviada | +
-aliviado | +
-alívio | +
-altiva | +
-altivo | +
-amada | +
-amado | +
-amarga | -
-amargo | -
-amargura | -
-amargurado | -
-amável | +
-amei | +
-amigável | +
-amor | +
-amorosa | +
-amoroso | +
-angústia | -
-angustiada | -
-angustiado | -
-angustiante | -
-angustiante | -
-angustiante | -
-animada | -
-animado | -
-ansiedade | +
-antecipativo | +
-anti-social | -
-antipática | -
-antipático | -
-apaixonada | +
-apaixonado | +
-apavorada | -
-apavorado | -
-apavorante | -
-apaziguar | +
-aprazível | +
-apreciação | +
-apreciativo | +
-apreço | +
-ardor | +
-arrependida | -
-arrependido | -
-arrependimento | -
-arrependimento | -
-artificialidade | -
-aspereza | -
-assistência humanitária | +
-associal | -
-assombro | -
-assustador | -
-atenuada | +
-atenuado | +
-atração | +
-atração física | +
-atraente | +
-atraída | +
-atraído | +
-atroz | -
-auto-complacência | -
-auto-depreciação | -
-auto-reprovação | -
-auto-respeito | +
-auto-satisfação | -
-auxiliar | +
-auxílio | +
-aversão | -
-azarada | -
-azarado | -
-baixa | -
-baixo | -
-bandida | -
-bandido | -
-beatífico | +
-beatitude | +
-beleza | +
-bem | +
-bem melhor | +
-bem-aventurado | +
-bem-aventurança | +
-benefício | +
-benigna | +
-benigno | +
-besta | -
-bestas | -
-boa | +
-boas | +
-boba | -
-bobas | -
-bobo | -
-bobos | -
-bom | +
-bons | +
-bom humor | +
-bom o suficiente | +
-bondade | +
-braba | -
-brabo | -
-brava | -
-bravo | -
-brilhante | +
-bruta | -
-bruto | -
-calorosa | +
-caloroso | +
-caluniosa | -
-calunioso | -
-cansativo | -
-carinhosa | +
-carinhoso | +
-cativada | +
-cativado | +
-censura | -
-chateada | -
-chateado | -
-chatice | -
-chato | -
-coitada | -
-coitado | -
-colérico | -
-comiseração | -
-compaixão | -
-compensação | -
-complacente | -
-compunção | -
-concupiscência | +
-condenável | -
-confiança | +
-conflito | -
-confusa | -
-consciência pesada | -
-consternação | -
-constrangido | -
-constrangimento | -
-construtivel | +
-contentamento | -
-contente | -
-contrariada | -
-contrariado | -
-contrito | -
-coração mole | +
-correto | +
-cortês | +
-covarde | -
-covardemente | -
-covardia | -
-cretina | -
-cretino | -
-criativa | +
-criativo | +
-cruel | -
-cuidadosa | +
-cuidadoso | +
-culpa | -
-culpa | -
-culpada | -
-culpado | -
-culposa | -
-culposo | -
-de boca aberta | +
-de dar pena | -
-decepção | -
-decepcionada | -
-decepcionado | -
-dedicação | +
-dedicada | +
-dedicado | +
-deleite | +
-delicada | +
-delicado | +
-demérito | -
-denegrir | -
-deplorável | -
-deplorável | -
-depressível | -
-deprimida | -
-deprimido | -
-derrotada | -
-derrotado | -
-desabrigada | -
-desabrigado | -
-desafortunada | -
-desafortunado | -
-desagradável | -
-desajeitada | -
-desajeitado | -
-desamparada | -
-desamparado | -
-desanimada | -
-desanimado | -
-desapontada | -
-desapontado | -
-desaprovam | -
-desaprovar | -
-descanso | +
-desconsolada | -
-desconsolado | -
-desejo | +
-desejo sexual | +
-desembaraço | +
-desgraça | -
-desgraçada | -
-desgraçado | -
-desonesta | -
-desonesto | -
-desonra | -
-desonrada | -
-desonrado | -
-desonrosa | -
-desonroso | -
-desprezível | -
-desprezível | -
-devotada | +
-devotadíssimo | +
-devotado | +
-difamar | -
-difícil | -
-digna | +
-dignificar | +
-digno | +
-discrepante | -
-dissimulada | -
-dissimulado | -
-divertida | +
-divertido | +
-dívida | -
-doce | +
-doença | -
-doentia | -
-doentio | -
-dolorosa | -
-doloroso | -
-duro | -
-dúvida | -
-elação | +
-elegância | +
-elegante | +
-elevação | +
-elevado | +
-emocionante | +
-enamorada | +
-enamorado | +
-encabulada | -
-encabulado | -
-encantada | +
-encantado | +
-encantador | +
-encargos | -
-enfezada | -
-enfezado | -
-enfurecida | -
-enfurecido | -
-engraçado | +
-enlouquecida | -
-enlouquecido | -
-enobrecer | +
-entendi | +
-entusiasmo | +
-envergonhada | -
-envergonhado | -
-errada | -
-errado | -
-escorbuto | -
-espanto | -
-esperança | +
-esperançosa | +
-esperançoso | +
-esperta | +
-esperto | +
-espetacular | +
-esplêndida | +
-esplêndido | +
-esplendor | +
-estima | +
-estragado | -
-estragou | -
-estranheza | -
-estressada | -
-estressado | -
-exaltada | +
-exaltado | +
-exasperado | -
-excelente | +
-excepcional | +
-excitação | +
-execração | -
-expectante | +
-expectativa | +
-expiação | -
-exultação | +
-exultante | +
-fabuloso | +
-falso | +
-fantástico | +
-fascinante| +
-fazer o bem | +
-fedida | -
-fedido | -
-fedorenta | -
-fedorento | -
-felicidade | +
-feliz | +
-ferir | -
-fétida | -
-fétido | -
-flagrante | -
-formos | +
-fraca | -
-fraco | -
-fraquinho | -
-frustrada | -
-frustrado | -
-fúria | -
-furiosa | -
-furioso | -
-galante | +
-gana | +
-ganhar | +
-genial | +
-gordurosa | -
-gorduroso | -
-gostar | +
-gostei | +
-gosto | +
-graciosa | +
-gracioso | +
-grande | +
-grandioso | +
-grandiosa | +
-grata | +
-gratidão | +
-gratificação | +
-gratificante | +
-grato | +
-grosseira | -
-grosseiro | -
-hilária | +
-hilário | +
-hilárias | +
-hilários | +
-hedionda | -
-hediondo | -
-honrada | +
-honrado | +
-horrenda | -
-horrendo | -
-horrível | -
-horror | -
-horrorosa | -
-horroroso | -
-hostil | -
-hostilidade | +
-humilhação | -
-humilhada | -
-humilhado | -
-humor bom | +
-idealizada | +
-idealizado | +
-idolátrico | +
-ignóbil | -
-ignomínia | -
-ilegitimidade | -
-ilegítimo | -
-imperdível | +
-imponderável | -
-impressionante | +
-imprópria | -
-impróprio | -
-impugnar | -
-imunda | -
-imundo | -
-inaceitável | -
-incitada | -
-incitado | -
-incompatível | -
-inconveniência | -
-inconveniente | -
-incrível | +
-indecente | -
-indenização | -
-indevida | -
-indevido | -
-indigna | -
-indignada | -
-indignado | -
-indigno | -
-inextinguível | -
-infame | -
-infâmia | -
-infeliz | -
-infeliz | -
-inferior | -
-inflamada | -
-inflamado | -
-ingrata | -
-ingrato | -
-inimizade | +
-inquieta | -
-inquieto | -
-insalubre | -
-insegura | -
-insegurança | -
-inseguro | -
-instável | -
-integração | -
-intelectual | +
-inteligente | +
-interessante | +
-invalidez | -
-invalido | -
-inveja | +
-ira | -
-irada | -
-irado | -
-irascível | -
-irritação | -
-irritada | -
-irritadiço | -
-irritado | -
-irritante | -
-irritável | -
-jovialidade | +
-júbilo | +
-jubiloso | +
-justiça | +
-justo | +
-lágrimas de crocodilo | -
-lamentável | -
-lamentável | -
-lastimosa | -
-lastimoso | -
-legal | +
-linda | +
-lindo | +
-lixo | -
-louca | -
-louca de raiva | -
-louco | -
-louco de raiva | -
-lucro | +
-má fama | -
-mágoa | -
-majestosa | +
-majestoso | +
-mal | -
-mal-humorado | -
-malandragem | -
-malcheirosa | -
-malcheiroso | -
-malévola | -
-malevolência | -
-malevolência | -
-malévolo | -
-malfeita | -
-malfeito | -
-malfeitor | -
-malícia | -
-malignidade | -
-malvada | -
-malvado | -
-maravilhosa | +
-maravilhoso | +
-mau | -
-mau humor | -
-máximo | +
-medo | -
-medonha | -
-medonho | -
-medrosa | -
-medroso | -
-megera | -
-melhor | +
-menos | -
-miserável | -
-misericórdia | -
-missão impossível | -
-moderação | +
-modéstia | +
-monstruosa | -
-monstruoso | -
-muito bem feita | +
-muito bem feito | +
-muito bom | +
-muito mal | -
-na expectativa | +
-namorico | +
-namoro | +
-negar | -
-negativa | -
-negativo | -
-nobre | +
-nocauteada | -
-nocauteado | -
-obra prima | +
-obsessão | +
-ódio | -
-ódio | -
-odiosa | -
-odioso | -
-odor | -
-ofendida | -
-ofendido | -
-oleosa | -
-oleoso | -
-olho grande | +
-oneração | -
-ônus | -
-orgulho | +
-orgulhosa | +
-orgulhoso | +
-otimista | +
-ótimo | +
-paixão | +
-pânico | -
-paternal | +
-patética | -
-patético | -
-patos | -
-pavor | -
-pavorosa | -
-pavoroso | -
-penitência | -
-penitente | -
-penosa | -
-penoso | -
-pequena | -
-pequeno | -
-perdida | -
-perdido | -
-perfeito | +
-perturbada | -
-perturbado | -
-perturbado | -
-pesarosa | -
-pesaroso | -
-péssima | -
-péssimo | -
-pestilenta | -
-pestilento | -
-piedade | -
-pior | -
-pobre | -
-pobre | -
-porcaria | -
-prazer | +
-prazer no sofrimento alheio | +
-preconceito | -
-prejuízo | -
-preocupação | -
-preocupada | -
-preocupado | -
-preocupante | -
-presunção | -
-presunçosa | -
-presunçoso | -
-previsível | -
-previsíveis | -
-problema | -
-problema | -
-problemática | -
-problemático | -
-quebrada | -
-quebrado | -
-queimada | -
-queimado | -
-radiante | -
-raiva | -
-raiva | -
-raivosa | -
-raivoso | -
-rancor | -
-rancorosa | -
-rancoroso | -
-realização | -
-receosa | -
-receoso | -
-recomendado | +
-recomendo | +
-ridícula | -
-ridículo | -
-regozijo | -
-remorso | -
-repreendível | -
-repudiar | -
-repugnância | -
-respeitável | +
-ressentida | -
-ressentido | -
-ressentimento | -
-reverência | +
-revoltada | -
-revoltado | -
-romântica | +
-romântico | +
-ruim | -
-ruindade | -
-satisfação | -
-satisfeita | -
-satisfeito | -
-saudável | +
-sem conforto | -
-sem sentido | -
-sensacional | +
-sensacionais | +
-sentimento de culpa | -
-sentimento de culpa | -
-severa | -
-severo | -
-simples | -
-soberba | +
-socorro | +
-sofrimento | -
-sofrimento | -
-solidariedade | -
-sólido | +
-sombrio | -
-sorte | +
-sossego | +
-suavizada | +
-suavizado | +
-submissa ao marido | +
-submisso a esposa | +
-sufocante | -
-suja | -
-sujo | -
-temerosa | -
-temeroso | -
-temível | -
-temor | -
-terna | +
-terno | +
-terrível | -
-terror | -
-tímido | +
-tormenta | -
-tormento | -
-tortura | -
-trabalho ruim | -
-travessura | -
-triste | -
-triste | -
-tristeza | -
-tristeza | -
-turbulenta | -
-turbulento | -
-vaidosa | -
-vaidoso | -
-vale a pena | +
-veneração | +
-venturosa | +
-venturoso | +
-verdadeiro | +
-vergonha | -
-vergonhosa | -
-vergonhoso | -
-verídica | +
-verídico | +
-vermelho de raiva | -
-vicio | -
-zangada | -
-zangado | -
-zelosa | +
-zeloso | +
+abafada | 0.2 | 0.325
+abafado | 0.2 | 0.325
+abalada | 0 | 0.4
+abalado | 0 | 0.4
+abandonada | 0 | 0.5
+abandonado | 0 | 0.5
+abatida | 0 | 0.5
+abatido | 0 | 0.5
+abençoada | 0.275 | 0
+abençoado | 0.275 | 0
+abjeta | 0.2 | 0
+abjeto | 0.2 | 0
+abominação | 0.450 | 0
+abominável | 0.450 | 0.125
+abrandamento | 0 | 0.25
+abusiva | 0.325 | 0.125
+abusivo | 0.325 | 0.125
+acalmar | 0.25 | 0
+acanhada | 0 | 0.325
+acanhado | 0 | 0.325
+acanhamento | 0 | 0.325
+acrimonioso | 0 | 0.325
+admiração | 0.55 | 0
+admirada | 0.55 | 0
+admirado | 0.55 | 0
+admirável | 0.55 | 0
+admirável | 0.55 | 0
+adorável | 0.625 | 0
+adorei | 0.775 | 0
+adoro | 0.775 | 0
+adversidade | 0 | 0.225
+afeição | 0.6 | 0
+afeiçoada | 0.225 | 0
+afeiçoado | 0.225 | 0
+afetuosa | 0.375 | 0
+afetuoso | 0.375 | 0
+aflição | 0 | 0.325
+aflição | 0 | 0.325
+afligem | 0 | 0.325
+afligir | 0 | 0.325
+aflita | 0 | 0.325
+aflito | 0 | 0.325
+afortunada | 0.25 | 0
+afortunado | 0.25 | 0
+agonia | 0.125 | 0.4
+agoniada | 0.125 | 0.4
+agoniado | 0.125 | 0.4
+agonizante | 0.125 | 0.4
+agonizar | 0.125 | 0.4
+agradável | 0.5 | 0.175
+agradecida | 0.5 | 0.25
+agradecido | 0.5 | 0.25
+ajuda | 0.5 | 0.3
+alarmante | 0.2 | 0.5
+alegre | 0.625 | 0
+alegria | 0.625 | 0
+aliviada | 0.475 | 0.175
+aliviado | 0.475 | 0.175
+alívio | 0.4 | 0.1
+altiva | 0.3 | 0
+altivo | 0.3 | 0
+amada | 0.75 | 0
+amado | 0.75 | 0
+amarga | 0.15 | 0.5
+amargo | 0.15 | 0.5
+amargura | 0.15 | 0.5
+amargurado | 0.15 | 0.5
+amável | 0.625 | 0
+amei | 0.875 | 0
+amigável | 0.525 | 0.125
+amor | 0.875 | 0
+amorosa | 0.875 | 0
+amoroso | 0.875 | 0
+angústia | 0.075 | 0.5
+angustiada | 0.075 | 0.5
+angustiado | 0.075 | 0.5
+angustiante | 0.075 | 0.5
+animada | 0.7 | 0.225
+animado | 0.7 | 0.225
+ansiedade | 0.525 | 0.325
+anti-social | 0.15 | 0.625
+antipática | 0.125 | 0.525
+antipático | 0.125 | 0.525
+apaixonada | 0.8 | 0
+apaixonado | 0.8 | 0
+apavorada | 0.125 | 0.5
+apavorado | 0.125 | 0.5
+apavorante | 0.175 | 0.6
+apaziguar | 0.5 | 0
+aprazível | 0.5 | 0
+apreciação | 0.4 | 0
+apreciativo | 0.4 | 0
+apreço | 0.625 | 0
+ardor | 0.5 | 0.25
+arrependida | 0.25 | 0.625
+arrependido | 0.25 | 0.625
+arrependimento | 0.25 | 0.625
+arrependimento | 0.25 | 0.625
+artificialidade | 0 | 0.5
+aspereza | 0 | 0.725
+associal | 0 | 0.5
+assombro | 0.225 | 0.625
+assustador | 0.25 | 0.75
+atenuada | 0.5 | 0
+atenuado | 0.5 | 0
+atração | 0.75 | 0.25
+atraente | 0.75 | 0.25
+atraída | 0.625 | 0.125
+atraído | 0.625 | 0.125
+atroz | 0 | 0.5
+auto-complacência | 0 | 0.5
+auto-depreciação | 0 | 0.75
+auto-reprovação | 0 | 0.75
+auto-respeito | 0.6 | 0
+auto-satisfação | 0.4 | 0.2
+auxiliar | 0.5 | 0.25
+auxílio | 0.5 | 0.25
+aversão | 0 | 0.7
+azarada | 0 | 0.75
+babaca | 0 | 0.725
+babaquice | 0 | 0.725
+bacana | 0.75 | 0
+baixa | 0.2 | 0.5
+baixo | 0.2 | 0.5
+bandida | 0.05 | 0.65
+bandido | 0.05 | 0.65
+beatífico | 0.5 | 0
+beatitude | 0.5 | 0
+beleza | 0.8 | 0
+bem | 0.75 | 0
+bem melhor | 0.675 | 0.25
+bem-aventurado | 0.6 | 0.1
+bem-aventurança | 0.6 | 0.1
+benefício | 0.7 | 0.1
+benigna | 0.7 | 0
+benigno | 0.7 | 0
+besta | 0 | 0.8
+besteirol | 0 | 0.8
+boa | 0.75 | 0
+boas | 0.75 | 0
+boba | 0.125 | 0.675
+bobas | 0.125 | 0.675
+bobagem | 0.1 | 0.7
+bobo | 0.125 | 0.675
+bobos | 0.125 | 0.765
+bom | 0.75 | 0
+bons | 0.75 | 0
+bom humor | 0.75 | 0
+bom o suficiente | 0.65 | 0.1
+bondade | 0.75 | 0
+braba | 0.2 | 0.7
+brabo | 0.2 | 0.7
+brava | 0.2 | 0.7
+bravo | 0.2 | 0.7
+brilhante | 0.7 | 0.2
+bruta | 0.1 | 0.7
+bruto | 0.1 | 0.7
+calorosa | 0.6 | 0
+caloroso | 0.6 | 0
+caluniosa | 0 | 0.6
+calunioso | 0 | 0.6
+cansativo | 0.1 | 0.7
+carinhosa | 0.8 | 0
+carinhoso | 0.8 | 0
+cativada | 0.7 | 0.1
+cativado | 0.7 | 0.1
+censura | 0 | 0.5
+chateada | 0 | 0.7
+chateado | 0 | 0.7
+chatice | 0 | 0.8
+chato | 0 | 0.8
+cobiçada | 0.5 | 0.225 
+cobiçado | 0.5 | 0.225
+coitada | 0.175 | 0.675
+coitado | 0.175 | 0.675
+colérico | 0.075 | 0.5
+comiseração | 0 | 0.5
+compaixão | 0.5 | 0.2
+compensação | 0.1 | 0.45
+complacente | 0 | 0.3
+compunção | 0 | 0.2
+concupiscência | 0.25 | 0
+condenável | 0.2 | 0.5
+confiança | 0.6 | 0.1
+conflito | 0.2 | 0.6
+confusa | 0.2 | 0.525
+confuso | 0.2 | 0.525
+consciência pesada | 0.125 | 0.325
+consternação | 0.1 | 0.5
+constrangido | 0.1 | 0.55
+constrangimento | 0.1 | 0.55
+construtivel | 0.3 | 0.1
+contentamento | 0.7 | 0.1
+contente | 0.7 | 0.1
+contrariada | 0 | 0.525
+contrariado | 0 | 0.525
+contrito | 0 | 0.375
+coração mole | 0.3 | 0.2
+correto | 0.7 | 0
+cortês | 0.65 | 0
+covarde | 0 | 0.675
+covardemente | 0 | 0.675
+covardia | 0 | 0.625
+cretina | 0.1 | 0.7
+cretino | 0.1 | 0.7
+criativa | 0.8 | 0
+criativo | 0.8 | 0
+cruel | 0.2 | 0.7
+cuidadosa | 0.55 | 0
+cuidadoso | 0.55 | 0
+culpa | 0 | 0.6
+culpa | 0 | 0.6
+culpada | 0 | 0.6
+culpado | 0 | 0.6
+culposa | 0 | 0.6
+culposo | 0 | 0.6
+de boca aberta | 0.75 | 0
+de dar pena | 0 | 0.75
+decepção | 0 | 0.825
+decepcionei | 0 | 0.825
+decepcionada | 0 | 0.825
+decepcionado | 0 | 0.825
+dedicação | 0.725 | 0.125
+dedicada | 0.725 | 0.125
+dedicado | 0.725 | 0.125
+deleite | 0.375 | 0
+delicada | 0.5 | 0.2
+delicado | 0.5 | 0.2
+demérito | 0.2 | 0.5
+denegrir | 0.2 | 0.5
+deplorável | 0 | 0.725
+deplorável | 0 | 0.725
+depressível | 0.1 | 0.7
+deprimida | 0.1 | 0.7
+deprimido | 0.1 | 0.7
+derrotada | 0.075 | 0.775
+derrotado | 0.075 | 0.775
+desabrigada | 0 | 0.35
+desabrigado | 0 | 0.35
+desafortunada | 0 | 0.55
+desafortunado | 0 | 0.55
+desagradável | 0 | 0.75
+desajeitada | 0.15 | 0.35
+desajeitado | 0.15 | 0.35
+desamparada | 0 | 0.3
+desamparado | 0 | 0.3
+desanimada | 0.1 | 0.6
+desanimado | 0.1 | 0.6
+desapontada | 0 | 0.75
+desapontado | 0 | 0.75
+desaprovam | 0 | 0.7
+desaprovar | 0 | 0.7
+descanso | 0.2 | 0
+desconsolada | 0 | 0.475
+desconsolado | 0 | 0.475
+desejo | 0.7 | 0.1
+desejo sexual | 0.7 | 0.25
+desembaraço | 0.25 | 0
+desgraça | 0 | 0.5
+desgraçada | 0 | 0.625
+desgraçado | 0 | 0.625
+desonesta | 0 | 0.675
+desonesto | 0 | 0.675
+desonra | 0 | 0.75
+desonrada | 0 | 0.75
+desonrado | 0 | 0.75
+desonrosa | 0 | 0.75
+desonroso | 0 | 0.75
+desprezível | 0 | 0.625
+deslumbrante | 0.75 | 0
+detestei | 0 | 0.825
+detestar | 0 | 0.825
+devotada | 0.35 | 0
+devotado | 0.35 | 0
+devotadíssima | 0.5 | 0
+devotadíssimo | 0.5 | 0
+difamar | 0 | 0.525
+difícil | 0.2 | 0.65
+digna | 0.625 | 0
+dignificar | 0.5 | 0
+digno | 0.625 | 0
+discrepante | 0 | 0.3
+dissimulada | 0 | 0.55
+dissimulado | 0 | 0.55
+divertida | 0.75 | 0
+divertido | 0.75 | 0
+dívida | 0 | 0.425
+doce | 0.55 | 0
+doença | 0 | 0.55
+doentia | 0 | 0.55
+doentio | 0 | 0.55
+dolorosa | 0 | 0.675
+doloroso | 0 | 0.675
+duro | 0.2 | 0.7
+dúvida | 0.1 | 0.4
+elação | 0.2 | 0
+elegância | 0.775 | 0.125
+elegante | 0.775 | 0.125
+elevação | 0.5 | 0.2
+elevado | 0.5 | 0.2
+emocionante | 0.875 | 0
+enamorada | 0.65 | 0
+enamorado | 0.5 | 0
+encabulada | 0.15 | 0.35
+encabulado | 0.15 | 0.35
+encantada | 0.75 | 0
+encantado | 0.75 | 0
+encantador | 0.75 | 0
+encargos | 0 | 0.3
+enfezada | 0 | 0.65
+enfezado | 0 | 0.65
+enfurecida | 0 | 0.675
+enfurecido | 0 | 0.675
+engraçado | 0.75 | 0
+enlouquecida | 0.1 | 0.65
+enlouquecido | 0.1 | 0.65
+enobrecer | 0.5 | 0
+entendi | 0.5 | 0.2
+entusiasmo | 0.7 | 0
+envergonhada | 0 | 0.7
+envergonhado | 0 | 0.7
+errada | 0 | 0.7
+errado | 0 | 0.7
+escorbuto | 0 | 0.5
+espanto | 0.1 | 0.65
+esperança | 0.65 | 0
+esperançosa | 0.55 | 0
+esperançoso | 0.55 | 0
+esperta | 0.75 | 0
+esperto | 0.75 | 0
+espetacular | 0.875 | 0
+esplêndida | 0.725 | 0
+esplêndido | 0.725 | 0
+esplendor | 0.625 | 0
+esquisita | 0.1 | 0.575
+esquisito | 0.1 | 0.575
+estima | 0.5 | 0
+estragado | 0 | 0.375
+estragou | 0 | 0.375
+estranheza | 0 | 0.5
+estressada | 0 | 0.6
+estressado | 0 | 0.6
+exaltada | 0.6 | 0
+exaltado | 0.6 | 0
+exasperado | 0 | 0.5
+excelente | 1 | 0
+excepcional | 0.85 | 0
+excitação | 0.75 | 0
+excitante | 0.75 | 0
+execração | 0 | 0.3
+expectante | 0.7 | 0.1
+expectativa | 0.7 | 0.1
+expiação | 0 | 0.2
+explendida | 0.7 | 0
+explendido | 0.7 | 0
+exultação | 0.4 | 0
+exultante | 0.4 | 0
+fabuloso | 0.875 | 0
+falso | 0.2 | 0.5
+fantástico | 1 | 0
+fascinante| 0.85 | 0
+fazer o bem | 0.75 | 0
+fedida | 0 | 0.35
+fedido | 0 | 0.35
+fedorenta | 0 | 0.35
+fedorento | 0 | 0.35
+felicidade | 0.75 | 0
+feliz | 0.75 | 0
+ferir | 0 | 0.35
+fétida | 0 | 0.25
+fétido | 0 | 0.25
+flagrante | 0.1 | 0.25
+formosa | 0.7 | 0
+formoso | 0.7 | 0
+fraca | 0.1 | 0.7
+fraco | 0 | 0.7
+fraquinha | 0.1 | 0.75
+fraquinho | 0.1 | 0.75
+fraquíssima | 0.1 | 0.8
+fraquíssimo | 0.1 | 0.8
+frustrada | 0 | 0.75
+frustrado | 0 | 0.75
+fúria | 0 | 0.65
+furiosa | 0 | 0.725
+furioso | 0 | 0.725
+galante | 0.625 | 0
+gana | 0.6 | 0.2
+ganhar | 0.5 | 0.1
+genial | 0.825 | 0
+gordurosa | 0 | 0.3
+gorduroso | 0 | 0.3
+gostar | 0.75 | 0
+gostei | 0.75 | 0
+gosta | 0.7 | 0
+gosto | 0.7 | 0
+graciosa | 0.5 | 0
+gracioso | 0.5 | 0
+grande | 0.5 | 0.2
+grandeza | 0.5 | 0.2
+grandioso | 0.6 | 0
+grandiosa | 0.6 | 0
+grata | 0.65 | 0
+gratidão | 0.65 | 0
+gratificação | 0.675 | 0
+gratificante | 0.675 | 0
+grato | 0.725 | 0
+grosseira | 0 | 0.625
+grosseiro | 0 | 0.625
+hilária | 0.775 | 0
+hilário | 0.775 | 0
+hilárias | 0.775 | 0
+hilários | 0.775 | 0
+hedionda | 0 | 0.7
+hediondo | 0 | 0.7
+honrada | 0.7 | 0
+honrado | 0.7 | 0
+horrenda | 0 | 0.75
+horrendo | 0 | 0.75
+horrível | 0.1 | 0.75
+horror | 0.1 | 0.7
+horrorosa | 0 | 0.8
+horroroso | 0 | 0.8
+hostil | 0.3 | 0.4
+hostilidade | 0.3 | 0.4
+humilhação | 0 | 0.5
+humilhada | 0 | 0.5
+humilhado | 0 | 0.5
+humor bom | 0.7 | 0.1
+idealizada | 0.5 | 0.1
+idealizado | 0.5 | 0.1
+idiota | 0 | 0.6
+idolátrico | 0.5 | 0
+ignóbil | 0 | 0.35
+ignomínia | 0 | 0.25
+ilegitimidade | 0 | 0.65
+ilegítimo | 0 | 0.65
+imperdível | 0.875 | 0
+imponderável | 0 | 0.25
+impressionante | 0.75 | 0
+imprópria | 0 | 0.5
+impróprio | 0 | 0.5
+impugnar | 0 | 0.5
+imunda | 0 | 0.625
+imundo | 0 | 0.625
+inaceitável | 0 | 0.725
+incitada | 0 | 0.35
+incitado | 0 | 0.35
+incompatível | 0 | 0.625
+inconveniência | 0 | 0.625
+inconveniente | 0 | 0.625
+incrível | 0.9 | 0
+indecente | 0 | 0.55
+indenização | 0 | 0.25
+indevida | 0 | 0.35
+indevido | 0 | 0.35
+indigna | 0.15 | 0.45
+indignada | 0.15 | 0.45
+indignado | 0.15 | 0.45
+indigno | 0 | 0.625
+inextinguível | 0.1 | 0.35
+infame | 0.15 | 0.375
+infâmia | 0.15 | 0.425
+infeliz | 0 | 0.75
+inferior | 0 | 0.725
+inflamada | 0 | 0.6
+inflamado | 0 | 0.6
+ingrata | 0.125 | 0.625
+ingrato | 0.125 | 0.625
+inimizade | 0.2 | 0.575
+inquieta | 0 | 0.65
+inquieto | 0 | 0.65
+insalubre | 0 | 0.65
+insegura | 0.1 | 0.725
+insegurança | 0.1 | 0.725
+inseguro | 0.1 | 0.725
+instável | 0.3 | 0.575
+integração | 0.2 | 0.35
+intelectual | 0.65 | 0
+inteligente | 0.65 | 0
+inteligência | 0.65 | 0
+interessante | 0.675 | 0
+invalidez | 0 | 0.2
+invalido | 0 | 0.2
+inveja | 0.3 | 0.5
+ira | 0 | 0.75
+irada | 0 | 0.75
+irado | 0 | 0.75
+irascível | 0 | 0.6
+irritação | 0 | 0.8
+irritada | 0 | 0.8
+irritadiço | 0 | 0.8
+irritado | 0 | 0.8
+irritante | 0 | 0.8
+irritável | 0 | 0.7
+jovialidade | 0.5 | 0
+júbilo | 0.5 | 0
+jubiloso | 0.65 | 0
+justiça | 0.75 | 0
+justo | 0.65 | 0
+lágrimas de crocodilo | 0 | 0.75
+lamentável | 0 | 0.75
+lamentável | 0 | 0.75
+lastimosa | 0 | 0.7
+lastimoso | 0 | 0.7
+legal | 0.75 | 0.1
+linda | 0.85 | 0
+lindo | 0.85 | 0
+lixo | 0 | 0.875
+louca | 0.2 | 0.7
+louca de raiva | 0.2 | 0.7
+louco | 0.2 | 0.7
+louco de raiva | 0.2 | 0.7
+lucro | 0.65 | 0.25
+má fama | 0 | 0.75
+mágoa | 0 | 0.85
+majestosa | 0.75 | 0
+majestoso | 0.75 | 0
+mal | 0 | 0.75
+mal-humorado | 0 | 0.85
+malandragem | 0.1 | 0.6
+malcheirosa | 0 | 0.4
+malcheiroso | 0 | 0.4
+malévola | 0 | 0.625
+malevolência | 0 | 0.625
+malevolência | 0 | 0.625
+malévolo | 0 | 0.626
+malfeita | 0 | 0.875
+malfeito | 0 | 0.875
+malfeitor | 0.25 | 0.7
+malícia | 0.2 | 0.675
+malignidade | 0.2 | 0.7
+malvada | 0.2 | 0.7
+malvado | 0.2 | 0.7
+maravilha | 0.9 | 0
+maravilhosa | 1 | 0
+maravilhoso | 1 | 0
+massante | 0 | 0.675
+mau | 0 | 0.75
+mau humor | 0 | 0.85
+máximo | 0.825 | 0
+medo | 0 | 0.7
+medonha | 0 | 0.675
+medonho | 0 | 0.675
+medrosa | 0.1 | 0.6
+medroso | 0.1 | 0.6
+megera | 0 | 0.6
+melhor | 0.75 | 0.1
+menos | 0.175 | 0.625
+mentira | 0.1 | 0.6
+miserável | 0 | 0.8
+misericórdia | 0.2 | 0.6
+moderação | 0.5 | 0
+modéstia | 0.675 | 0
+monstruosa | 0 | 0.825
+monstruoso | 0 | 0.825
+muito bem feita | 0.85 | 0
+muito bem feito | 0.85 | 0
+muito mal feita | 0 | 0.85
+muito mal feito | 0 | 0.85
+muito bom | 0.825 | 0
+muito mal | 0 | 0.825
+na expectativa | 0.65 | 0
+namorico | 0.65 | 0
+namoro | 0.65 | 0
+negar | 0.2 | 0.5
+negativa | 0 | 0.8
+negativo | 0 | 0.8
+nobre | 0.625 | 0.125
+nocauteada | 0.4 | 0.55
+nocauteado | 0.4 | 0.55
+obra prima | 1 | 0
+obsessão | 0.5 | 0.3
+odiar | 0 | 0.8
+ódio | 0 | 0.8
+odiei | 0 | 0.8
+odiosa | 0 | 0.8
+odioso | 0 | 0.8
+ofendida | 0.05 | 0.55
+ofendido | 0.05 | 0.55
+oleosa | 0 | 0.3
+oleoso | 0 | 0.3
+oneração | 0 | 0.675
+ônus | 0 | 0.65
+ordinária | 0 | 0.625
+ordinário | 0 | 0.625
+orgulho | 0.75 | 0
+orgulhosa | 0.75 | 0
+orgulhoso | 0.75 | 0
+otimista | 0.8 | 0
+ótimo | 0.9 | 0
+paixão | 0.8 | 0.1
+pânico | 0.2 | 0.65
+patética | 0.1 | 0.9
+patético | 0.1 | 0.9
+patos | 0 | 0.6
+pavor | 0.15 | 0.75
+pavorosa | 0.15 | 0.75
+pavoroso | 0.15 | 0.75
+penitência | 0 | 0.2
+penitente | 0 | 0.2
+penosa | 0.125 | 0.625
+penoso | 0.125 | 0.625
+pequena | 0.1 | 0.3
+pequeno | 0.1 | 0.3
+perdida | 0 | 0.5
+perdido | 0 | 0.5
+perfeita | 1 | 0
+perfeito | 1 | 0
+perturbada | 0.1 | 0.4
+perturbado | 0.1 | 0.4
+pesarosa | 0 | 0.4
+pesaroso | 0 | 0.4
+péssima | 0 | 1
+péssimo | 0 | 1
+piedade | 0.125 | 0.55
+pior | 0 | 0.75
+pobre | 0.2 | 0.7
+porcaria | 0 | 0.8
+prazer | 0.725 | 0
+preconceito | 0 | 0.7
+prejuízo | 0 | 0.5
+preocupação | 0.1 | 0.5
+preocupada | 0.1 | 0.5
+preocupado | 0.1 | 0.5
+preocupante | 0.1 | 0.5
+presunção | 0 | 0.5
+presunçosa | 0 | 0.5
+presunçoso | 0 | 0.5
+previsível | 0.2 | 0.4
+previsíveis | 0.2 | 0.4
+problema | 0.1 | 0.3
+problemática | 0.1 
+azarado | 0 | 0.75| 0.4
+problemático | 0.1 | 0.4
+quebrada | 0 | 0.3
+quebrado | 0 | 0.3
+queimada | 0 | 0.2
+queimado | 0 | 0.2
+radiante | 0.6 | 0.2
+raiva | 0.1 | 0.75
+raivosa | 0.1 | 0.75
+raivoso | 0.1 | 0.75
+rancor | 0.1 | 0.65
+rancorosa | 0.05 | 0.65
+rancoroso | 0.05 | 0.65
+receosa | 0 | 0.7
+receoso | 0 | 0.7
+recomendado | 0.8 | 0
+recomendo | 0.8 | 0
+ridícula | 0 | 0.825
+ridículo | 0 | 0.825
+regozijo | 0 | 0.5
+remorso | 0.2 | 0.5
+repreendível | 0 | 0.7
+repudiar | 0.1 | 0.7
+repugnância | 0.1 | 0.7
+respeitável | 0.675 | 0
+ressentida | 0 | 0.6
+ressentido | 0 | 0.6
+ressentimento | 0 | 0.625
+reverência | 0.325 | 0.175
+revoltada | 0 | 0.5
+revoltado | 0 | 0.5
+romântica | 0.775 | 0
+romântico | 0.775 | 0
+ruim | 0 | 0.75
+ruindade | 0 | 0.75
+satisfação | 0.6 | 0.2
+satisfeita | 0.6 | 0.2
+satisfeito | 0.6 | 0.2
+saudável | 0.8 | 0
+sem conforto | 0.2 | 0.5
+sem graça | 0 | 0.725
+sem sentido | 0 | 0.8
+sensacional | 1 | 0
+sensacionais | 1 | 0
+sentimento de culpa | 0 | 0.7
+sentimento de culpa | 0 | 0.7
+severa | 0 | 0.6
+severo | 0 | 0.6
+simples | 0.15 | 0.7
+soberba | 0.5 | 0.3
+socorro | 0.5 | 0.5
+sofrimento | 0 | 0.8
+solidariedade | 0.5 | 0.1
+sólido | 0.5 | 0.2
+sombrio | 0.125 | 0.625
+sorte | 0.65 | 0.25
+sossego | 0.5 | 0
+suavizada | 0.5 | 0.2
+suavizado | 0.5 | 0.2
+sufocante | 0 | 0.5
+suja | 0 | 0.75
+sujo | 0 | 0.75
+temerosa | 0 | 0.75
+temeroso | 0 | 0.75
+temível | 0 | 0.75
+temor | 0.1 | 0.75
+terna | 0.75 | 0
+terno | 0.75 | 0
+terrível | 0 | 1
+terror | 0.1 | 0.8
+tímido | 0.4 | 0.2
+tormenta | 0 | 0.75
+tormento | 0 | 0.75
+tortura | 0 | 0.775
+tosco | 0 | 0.5
+trabalho ruim | 0 | 0.75
+travessura | 0 | 0.625
+triste | 0 | 0.85
+tristeza | 0 | 0.8
+tristeza | 0 | 0.8
+turbulenta | 0 | 0.5
+turbulento | 0 | 0.5
+vaidosa | 0.225 | 0.575
+vaidoso | 0.225 | 0.575
+vale a pena | 0.85 | 0
+veneração | 0.6 | 0
+venturosa | 0.5 | 0
+venturoso | 0.5 | 0
+verdadeira | 0.625 | 0.175
+verdadeiro | 0.625 | 0.175
+vergonha | 0 | 0.75
+vergonhosa | 0 | 0.8
+vergonhoso | 0 | 0.8
+verídica | 0.625 | 0.125
+verídico | 0.625 | 0.125
+vermelho de raiva | 0 | 0.8
+vicio | 0.25 | 0.6
+zangada | 0 | 0.8
+zangado | 0 | 0.8
+zelosa | 0.7 | 0
+zeloso | 0.7 | 0

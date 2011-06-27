@@ -3,6 +3,7 @@ class CreateOpinions < ActiveRecord::Migration
     create_table :opinions do |t|
       t.integer :entity_id
       t.string :human_score
+      t.string :polarity
       t.text :opinion_text
 
       t.timestamps

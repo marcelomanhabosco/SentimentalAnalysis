@@ -14,7 +14,8 @@ ActiveRecord::Schema.define(:version => 20110523030257) do
 
   create_table "affective_words", :force => true do |t|
     t.string   "word"
-    t.string   "polarity"
+    t.float    "pos"
+    t.float    "neg"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -50,8 +51,9 @@ ActiveRecord::Schema.define(:version => 20110523030257) do
     t.integer  "initial_position"
     t.integer  "final_position"
     t.integer  "sentence_count"
-    t.string   "text"
-    t.string   "polarity"
+    t.text     "text"
+    t.float    "pos"
+    t.float    "neg"
     t.integer  "opinion_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -60,18 +62,20 @@ ActiveRecord::Schema.define(:version => 20110523030257) do
   create_table "opinions", :force => true do |t|
     t.integer  "entity_id"
     t.string   "human_score"
+    t.string   "polarity"
     t.text     "opinion_text"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "polarity_opinion_words", :force => true do |t|
-    t.string   "polarity"
+    t.integer  "opinion_sentence_id"
+    t.integer  "position"
+    t.float    "pos"
+    t.float    "neg"
     t.string   "word"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "opinion_sentence_id"
-    t.integer  "position"
   end
 
   create_table "stop_words", :force => true do |t|

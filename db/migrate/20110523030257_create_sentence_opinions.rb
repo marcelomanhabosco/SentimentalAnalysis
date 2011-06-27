@@ -4,8 +4,9 @@ class CreateSentenceOpinions < ActiveRecord::Migration
       t.integer :initial_position
       t.integer :final_position
       t.integer :sentence_count
-      t.string :text
-      t.string :polarity
+      t.text :text
+      t.float :pos
+      t.float :neg
       t.integer :opinion_id
 
       t.timestamps

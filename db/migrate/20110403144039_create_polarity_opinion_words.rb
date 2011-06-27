@@ -1,8 +1,10 @@
 class CreatePolarityOpinionWords < ActiveRecord::Migration
   def self.up
     create_table :polarity_opinion_words do |t|
-      t.integer :opinion_id
-      t.string :polarity
+      t.integer :opinion_sentence_id
+      t.integer :position
+      t.float :pos
+      t.float :neg
       t.string :word
 
       t.timestamps

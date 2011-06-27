@@ -32,11 +32,11 @@ File.open(caminho + 'base_tep2.txt').each_with_index do |linha, index|
   end
 end
 
-# WordNetAffectBR
+# Dicionario Afetivo
 File.open(caminho + 'affective_words.txt').each_with_index do |linha, index|
-  word, polarity = linha.chomp.split(" | ")
+  word, pos, neg = linha.chomp.split(" | ")
   puts "Importando Palavra Afetiva - #{word}"
-  AffectiveWord.create!(:word => word, :polarity => polarity)
+  AffectiveWord.create!(:word => word, :pos => pos, :neg => neg)
 end
 
 # Relações de Antonímia e Sinonímia

@@ -32,7 +32,9 @@ class OpinionsController < ApplicationController
       cleaned_opinions << cleaned_opinion unless cleaned_opinion.nil?
     end
     
-    proccess_sentences(corrected_opinions)
+    cleaned_opinions = opinions
+    
+    proccess_sentences(cleaned_opinions)
     
     @entity = Entity.find(params[:id])
     redirect_to @entity
@@ -89,7 +91,7 @@ class OpinionsController < ApplicationController
         @correct_opinion = @correct_opinion + is_lang.to_s + " "
       else
         affective_word = AffectiveWord.find(:first, :conditions => ['word LIKE ?', op.singularize]) || nil
-        if affective_word.nil?
+        if !affective_word.nil? or op == "mais"
           @correct_opinion = @correct_opinion + op + " "
         else
           suggestions = @dict.suggest(op)
@@ -113,7 +115,7 @@ class OpinionsController < ApplicationController
       i = 1
       sentence = 1
       in_pos, final_pos = nil, nil
-      cleaned_op.corrected_opinion_text.split(/[\,\.\?\!\:\;]/).each do |op|
+      cleaned_op.opinion_text.downcase.split(/[\,\.\?\!\:\;]/).each do |op|
         string = ""
         in_pos = i
         op.split(" ").each do |word|
@@ -121,69 +123,56 @@ class OpinionsController < ApplicationController
           final_pos = i
           string = string +" "+ word.to_s
         end
-        os = OpinionSentence.create(:opinion_id => cleaned_op.opinion_id, :text => string, :initial_position => in_pos, :final_position => final_pos, :polarity => nil, :sentence_count => sentence) unless string.size < 3
+        os = OpinionSentence.create(:opinion_id => cleaned_op.id, :text => string, :initial_position => in_pos, :final_position => final_pos, :pos => 0, :neg => 0, :sentence_count => sentence) unless string.size < 5
         if os
-          polarity = return_phrase_polarity(os)
-          analize_sentence(os, polarity)
+          return_phrase_polarity(os)
+          analize_sentence(os)
           sintetize_sentence_polarity(os)
           sentence = sentence + 1
         end
   		end
+  	  sintetize_opinion_polarity(cleaned_op.id)
     end
   end
   
   def sintetize_sentence_polarity(os)
-    positive, negative = 0, 0
+    positive, negative = 0.0, 0.0
     PolarityOpinionWord.where(:opinion_sentence_id => os.id).each do |pow|
-      if pow.polarity == "+"
-		    positive += 1
-      else
-        negative += 1
-      end
+      positive = positive + pow.pos unless pow.pos == nil
+      negative = negative + pow.neg unless pow.neg == nil
     end
-    if positive > negative
-      polarity = "+"
-    elsif positive == negative
-      polarity = ""
-    else
-      polarity = "-"
-    end
-    os.update_attribute(:polarity, polarity)
+    os.update_attributes(:pos => positive, :neg => negative)
   end
   
-  def analize_sentence(os, polarity)
+  def analize_sentence(os)
     i = 0
     os.text.split(" ").each do |word|
       i= i+1
       if word.force_encoding("UTF-8") == "não"
         p = PolarityOpinionWord.where(:opinion_sentence_id => os.id).where("position >= ?", i).first
-        p.update_attributes(:polarity => change_polarity(p.polarity), :word => "#{word.force_encoding("ASCII-8BIT")} #{p.word}") if p
+        p.update_attributes(:pos => p.neg, :neg => p.pos, :word => "#{word.force_encoding("ASCII-8BIT")} #{p.word}") if p
       end
-      if i == 1 and (word == "mas" or word == "porém")
+      if i == 1 and (word == "mas" or word == "porém" or word == "não")
         p = PolarityOpinionWord.where(:opinion_sentence_id => os.id).where("position >= ?", i).first || nil
-        p.update_attributes(:polarity => change_polarity(p.polarity), :word => "#{word} #{p.word}") unless p == nil
+        p.update_attributes(:pos => p.neg, :neg => p.pos, :word => "#{word} #{p.word}") unless p == nil
       elsif word == "mas" or word == "porém"
         p = OpinionSentence.where(:opinion_id => os.opinion_id).where("sentence_count = ?", os.sentence_count-1).first || nil
-        if p != nil
-          p.update_attributes(:polarity => change_polarity(p.polarity)) unless p == nil
-        else
-          p2 = PolarityOpinionWord.where(:opinion_sentence_id => os.id).where("position >= ?", i).first || nil
-          p2.update_attributes(:polarity => change_polarity(p2.polarity), :word => "#{word} #{p2.word}") unless p2 == nil
-        end
+        p.update_attributes(:pos => p.neg, :neg => p.pos) unless p == nil
       end
-    end
+    end unless os.nil?
   end
   
   def return_phrase_polarity(os)
     i = os.initial_position
-    affective_word = nil
     os.text.split(" ").each do |word|
-      affective_word = AffectiveWord.find(:first, :conditions => ['word LIKE ?', word.singularize]) || nil
-
-      PolarityOpinionWord.create(:word => affective_word.word, :polarity => affective_word.polarity, :opinion_sentence_id => os.id, :position =>i) unless affective_word == nil
+      if word.to_s != "mais" and word.to_s != "porcaria" and word.to_s != "besta" and word.to_s != "gosta"
+        affective_word = AffectiveWord.find(:first, :conditions => ['word LIKE ?', word.singularize]) || nil
+      else
+        affective_word = AffectiveWord.find(:first, :conditions => ['word LIKE ?', word]) || nil
+      end
+      PolarityOpinionWord.create(:word => affective_word.word, :pos => affective_word.pos, :neg => affective_word.neg, :opinion_sentence_id => os.id, :position =>i) unless affective_word == nil
       i= i+1
     end
-    affective_word
   end
   
   def find_synonym_or_antonym(word, opinion_id)
@@ -220,12 +209,20 @@ class OpinionsController < ApplicationController
     end
   end
   
-  def change_polarity(polarity)
-    if polarity == "+"
-      return "-"
-    else
-      return "+"
+  def sintetize_opinion_polarity(opinion_id)
+    polarity, positive, negative = "", 0, 0
+    OpinionSentence.where(:opinion_id => opinion_id).each do |os|
+      positive = positive + os.pos
+      negative = negative + os.neg
     end
+    if positive > negative
+      polarity = "Positivo"
+    elsif positive == negative
+      polarity = "Neutro"
+    else
+      polarity = "Negativo"
+    end
+    Opinion.find(opinion_id).update_attributes(:polarity => polarity)
   end
   
 end

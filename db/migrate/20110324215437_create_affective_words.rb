@@ -2,7 +2,8 @@ class CreateAffectiveWords < ActiveRecord::Migration
   def self.up
     create_table :affective_words do |t|
       t.string :word
-      t.string :polarity
+      t.float :pos
+      t.float :neg
 
       t.timestamps
     end

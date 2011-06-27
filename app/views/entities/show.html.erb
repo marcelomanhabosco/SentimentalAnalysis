@@ -103,13 +103,14 @@
 		  	<tr>
 		    	<td><%= @i %></td>
 					<td><%= opinion.opinion_text %></td>
-					<td> Sentença:
+					<td>
+						<%= " <b> #{opinion.polarity} </b>".html_safe %>
 						<% OpinionSentence.where(:opinion_id => opinion.id).each do |sentence| %>
-							<%= "#{sentence.polarity.force_encoding("UTF-8")} (  " %>
+							<%= " (  " %>
 							<% PolarityOpinionWord.where(:opinion_sentence_id => sentence.id).each do |pow| %>
-								<%= "#{pow.word.force_encoding("UTF-8")} ~ #{pow.polarity.force_encoding("UTF-8")} " %>
+								<%= "<i>#{pow.word.force_encoding("UTF-8")}</i> => pos: #{pow.pos} ~ neg: #{pow.neg} | ".html_safe %>
 							<% end %>
-							<%= ") |" %>
+							<%= ") |      " %>
 						<% end %>
 					</td>
 		  		</tr>
@@ -129,35 +130,28 @@
 		<% @i=1 %>
 		<% pp, np, pe, ne = 0, 0, 0, 0 %>
 		<% @opinions.each do |opinion| %>
-			<% negative,positive = 0,0 %>
-			<% OpinionSentence.where(:opinion_id => opinion.id).each do |sentence| %>
-				<% if sentence.polarity == "+" %>
-					<% positive = positive + 1%>
-				<% elsif sentence.polarity == "-" %>
-					<% negative = negative + 1%>
-				<% end %>
-			<% end %>
 		  	<tr>
 		    	<td><%= @i %></td>
 					<% hs = opinion.human_score.force_encoding("UTF-8") %>
-					<% if opinion.human_score.force_encoding("UTF-8") == "Positivo" %>
+					<% if hs == "Positivo" %>
 						<td style='background-color:#CDEB8B;'><b><%= hs %></td>
-					<% elsif opinion.human_score.force_encoding("UTF-8") == "Neutro" %>
+					<% elsif hs == "Neutro" %>
 						<td><b><%= hs %></b></td>
 					<% else %>
 						<td style="background-color:#E35B5B;"><b><%= hs %></b></td>
 					<% end %>
-					<% if positive > negative %>
+					<% polarity = opinion.polarity.force_encoding("UTF-8") unless opinion.polarity == nil %>
+					<% if polarity == "Positivo" %>
 						<td style="background-color:#CDEB8B;"><b><%= ss = "Positivo" %></b></td>
-				 	<% elsif positive == negative %>
-						<td><b><%= ss = "Neutro" %></b></td>
-					<% else %>
+				 	<% elsif polarity == "Negativo" %>
 						<td style="background-color:#E35B5B;"><b><%= ss = "Negativo" %></b></td>
+					<% else %>
+						<td><b><%= ss = "Neutro" %></b></td>
 					<% end %>
 					<% if hs == ss %>
 						<td style='color:green;'><b>Acerto</b></td>
 						<% acertos = acertos+1 %>
-						<% if opinion.human_score.force_encoding("UTF-8") == "Positivo" %>
+						<% if hs == "Positivo" %>
 							<% pp = pp+1 %>
 						<% else %>
 							<% np = np+1 %>
@@ -165,7 +159,7 @@
 					<% else %>
 						<td style="color:red;"><b>Erro</b></td>
 						<% erros = erros+1 %>
-							<% if opinion.human_score.force_encoding("UTF-8") == "Positivo" %>
+							<% if hs == "Positivo" %>
 								<% pe = pe+1 %>
 							<% else %>
 								<% ne = ne+1 %>
